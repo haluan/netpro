@@ -1,3 +1,6 @@
+.body{
+	background: #CCCCCC;
+}
 .konser{
 	background-image: url('img/konser.jpg');
 	background-size: cover;
