@@ -634,7 +634,7 @@
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Registration Start </label>
 
 										<div class="col-sm-9">
-											<input type="text" id="datepicker" class="ol-xs-10 col-sm-5" />
+											<input type="text" id="datepicker1" class="ol-xs-10 col-sm-5" />
 											<span class="help-inline col-xs-12 col-sm-7">
 												<span class="middle"><i class="icon-calendar"></i></span>
 											</span>
@@ -644,7 +644,7 @@
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Registration End </label>
 
 										<div class="col-sm-9">
-											<input type="text" id="datepicker" class="ol-xs-10 col-sm-5" />
+											<input type="text" id="datepicker2" class="ol-xs-10 col-sm-5" />
 											<span class="help-inline col-xs-12 col-sm-7">
 												<span class="middle"><i class="icon-calendar"></i></span>
 											</span>
@@ -654,7 +654,7 @@
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Event Start </label>
 
 										<div class="col-sm-9">
-											<input type="text" id="datepicker" class="ol-xs-10 col-sm-5" />
+											<input type="text" id="datepicker3" class="ol-xs-10 col-sm-5" />
 											<span class="help-inline col-xs-12 col-sm-7">
 												<span class="middle"><i class="icon-calendar"></i></span>
 											</span>
@@ -664,7 +664,7 @@
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Event End </label>
 
 										<div class="col-sm-9">
-											<input type="text" id="datepicker" class="ol-xs-10 col-sm-5" />
+											<input type="text" id="datepicker4" class="ol-xs-10 col-sm-5" />
 											<span class="help-inline col-xs-12 col-sm-7">
 												<span class="middle"><i class="icon-calendar"></i></span>
 											</span>
@@ -750,7 +750,7 @@
 		<script type="text/javascript">
 			jQuery(function($) {
 			
-				$( "#datepicker" ).datepicker({
+				$( "#datepicker1" ).datepicker({
 					showOtherMonths: true,
 					selectOtherMonths: false,
 					//isRTL:true,
@@ -774,8 +774,78 @@
 					}
 			*/
 				});
+			$( "#datepicker2" ).datepicker({
+					showOtherMonths: true,
+					selectOtherMonths: false,
+					//isRTL:true,
 			
+					
+					/*
+					changeMonth: true,
+					changeYear: true,
+					
+					showButtonPanel: true,
+					beforeShow: function() {
+						//change button colors
+						var datepicker = $(this).datepicker( "widget" );
+						setTimeout(function(){
+							var buttons = datepicker.find('.ui-datepicker-buttonpane')
+							.find('button');
+							buttons.eq(0).addClass('btn btn-xs');
+							buttons.eq(1).addClass('btn btn-xs btn-success');
+							buttons.wrapInner('<span class="bigger-110" />');
+						}, 0);
+					}
+			*/
+				});
+			$( "#datepicker3" ).datepicker({
+					showOtherMonths: true,
+					selectOtherMonths: false,
+					//isRTL:true,
 			
+					
+					/*
+					changeMonth: true,
+					changeYear: true,
+					
+					showButtonPanel: true,
+					beforeShow: function() {
+						//change button colors
+						var datepicker = $(this).datepicker( "widget" );
+						setTimeout(function(){
+							var buttons = datepicker.find('.ui-datepicker-buttonpane')
+							.find('button');
+							buttons.eq(0).addClass('btn btn-xs');
+							buttons.eq(1).addClass('btn btn-xs btn-success');
+							buttons.wrapInner('<span class="bigger-110" />');
+						}, 0);
+					}
+			*/
+				});
+				$( "#datepicker4" ).datepicker({
+					showOtherMonths: true,
+					selectOtherMonths: false,
+					//isRTL:true,
+			
+					
+					/*
+					changeMonth: true,
+					changeYear: true,
+					
+					showButtonPanel: true,
+					beforeShow: function() {
+						//change button colors
+						var datepicker = $(this).datepicker( "widget" );
+						setTimeout(function(){
+							var buttons = datepicker.find('.ui-datepicker-buttonpane')
+							.find('button');
+							buttons.eq(0).addClass('btn btn-xs');
+							buttons.eq(1).addClass('btn btn-xs btn-success');
+							buttons.wrapInner('<span class="bigger-110" />');
+						}, 0);
+					}
+			*/
+				});
 				//override dialog's title function to allow for HTML titles
 				$.widget("ui.dialog", $.extend({}, $.ui.dialog.prototype, {
 					_title: function(title) {
